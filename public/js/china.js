@@ -1,7 +1,6 @@
 var file = 'data/csv/china.csv';
 d3.csv(file).then(getChina);
 function getChina(data) {
-    var date = data.map(function (d) { return d.Date });
     var confirmed = data.map(function (d) { return d.Confirmed });
     var deaths = data.map(function (d) { return d.Deaths });
     var recovered = data.map(function (d) { return d.Recovered });
