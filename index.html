@@ -21,8 +21,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#">Link</a>
-                <a class="nav-item nav-link" href="#">Link</a>
+                <a class="nav-item nav-link" href="https://www.who.int/" target="_blank">World Health Organization</a>
             </div>
         </div>
     </nav>
@@ -35,12 +34,26 @@
             <a class="nav-link" href="#">Nation</a>
         </nav>
     </div>
-    <div class="container">
+    <div class="container text-light text-center">
+        <div class="mt-5">
+            <h2>Coronavirus disease (COVID-2019) situation reports</h2>
+        </div>
+        <hr class="bg-light">
         <div class="mt-3" id="zh">
-            <h1 class="text-light text-center">China</h1>
+            <h1>China</h1>
             <canvas id="chartChina" width="400"></canvas>
         </div>
     </div>
+    <footer class="text-muted mt-5">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Data are taken from <strong>World Health Organization</strong></p>
+            <p>The code of this project is open-sourced on Github with the MIT License.</p>
+        </div>
+    </footer>
+
     <script src="public/js/china.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
