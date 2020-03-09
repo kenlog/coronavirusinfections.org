@@ -3,7 +3,7 @@ body {
 }
 
 .bg-dark {
-    background-color: #171c21!important;
+    background-color: rgba(23, 28, 33, 0.7)!important;
 }
 
 .nav-scroller {
@@ -31,7 +31,7 @@ body {
     padding-top: .75rem;
     padding-bottom: .75rem;
     font-size: .875rem;
-    color: #6c757d;
+    color: #c7c7c7;
 }
 
 .nav-underline .nav-link:hover {
