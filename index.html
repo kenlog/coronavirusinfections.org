@@ -26,17 +26,14 @@
         </div>
     </nav>
     <div class="navbar sticky-top bg-dark shadow-sm">
-        <div class="nav-scroller">
-            <nav class="nav nav-underline">
-                <a class="nav-link" href="#zh">China</a>
-                <a class="nav-link" href="#ko">Korea</a>
-                <a class="nav-link" href="#jp">Japan</a>
-                <a class="nav-link" href="#sg">Singapore</a>
-                <a class="nav-link" href="#">Nation</a>
-                <a class="nav-link" href="#">Nation</a>
-                <a class="nav-link" href="#">Nation</a>
-                <a class="nav-link" href="#">Nation</a>
-            </nav>
+        <div class="form-group col">
+            <select class="form-control" id="nationControlSelect" onchange="location = this.value;">
+                <option selected value> -- Select an Nation -- </option>
+                <option value="#zh">China</option>
+                <option value="#ko">Korea</option>
+                <option value="#jp">Japan</option>
+                <option value="#sg">Singapore</option>
+            </select>
         </div>
     </div>
     <div class="container-fluid text-light text-center">

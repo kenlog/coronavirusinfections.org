@@ -42,3 +42,18 @@ body {
     font-weight: 500;
     color: #343a40;
 }
+
+.form-control{
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.form-control:focus {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+select option {
+    color: #ffffff;
+    background: rgba(23, 28, 33, 0.787);
+}
