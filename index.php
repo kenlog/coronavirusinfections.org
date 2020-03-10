@@ -97,7 +97,11 @@ require 'vendor/autoload.php';
           $sumRecovered = 0;
           foreach ($csvFile as $row) {
             echo '<tr>';
-            echo '<th>'.$row[0].'</th>';
+            if (empty($row[0])) {
+                echo '<th>'.$row[1].'</th>';
+            } else {
+                echo '<th>'.$row[0].'</th>';
+            }
             echo '<th>'.$row[1].'</th>';
             echo '<th>'.$row[2].'</th>';
             echo '<th>'.$row[3].'</th>';
