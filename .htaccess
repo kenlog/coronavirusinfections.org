@@ -1,0 +1,25 @@
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header append X-Frame-Options "DENY"
+Header set X-XSS-Protection "1; mode=block"
+Header unset X-Powered-By
+</IfModule>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+Options All -Indexes
+
+RedirectMatch 404 /\..*$
+
+<FilesMatch "(\.(ya?ml$|json|lock|fla|inc|ini|log|psd|sh|sql|swp|csv)|~)$">
+    ## Apache 2.2
+    Order allow,deny
+    Deny from all
+    Satisfy All
+
+    ## Apache 2.4
+    # Require all denied
+</FilesMatch>
