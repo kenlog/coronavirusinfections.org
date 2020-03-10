@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the Covid19 project.
+ * This file is part of the coronavirusinfections.org project.
  * 
  * @author Valentino Pesce
  * @copyright (c) Valentino Pesce <valentino@iltuobrand.it>
