@@ -12,6 +12,8 @@
 
 require 'vendor/autoload.php';
 
+$host = "http://$_SERVER[HTTP_HOST]";
+
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +31,7 @@ require 'vendor/autoload.php';
 
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?= $host; ?>">
             <img src="public/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
             Coronavirus infections (COVID-19)
         </a>
