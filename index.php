@@ -155,10 +155,16 @@ require 'vendor/autoload.php';
 
         $(function() {
             $('#toolbar').find('select').change(function () {
-            $table.bootstrapTable('destroy').bootstrapTable({
-                exportDataType: $(this).val(),
-                exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
-            })
+                $table.bootstrapTable('destroy').bootstrapTable({
+                    exportDataType: $(this).val(),
+                    exportOptions: {
+                        fileName: function () {
+                            return 'Situation reports (COVID-19)'
+                        },
+                        preventInjection: false
+                    },
+                    exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
+                })
             }).trigger('change')
         })
     </script>
