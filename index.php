@@ -128,6 +128,8 @@ require 'vendor/autoload.php';
             </div>
         </div>
 
+        <canvas id="globallyChart" width="100%"></canvas>
+
     </div>
 
     <footer class="text-muted mt-5 mb-5">
@@ -142,6 +144,7 @@ require 'vendor/autoload.php';
 
     <script src="public/js/jquery-3.3.1.min.js"></script>
     <script src="public/js/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/bootstrap-table.min.js"></script>
     <script src="public/js/bootstrap-table-filter-control.min.js"></script>
@@ -167,6 +170,39 @@ require 'vendor/autoload.php';
                 })
             }).trigger('change')
         })
+    </script>
+    <script>
+        var ctx = document.getElementById('globallyChart').getContext('2d');
+        var globallyChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Confirmed', 'Deaths', 'Recovered'],
+                datasets: [{
+                    label: 'Situation reports (COVID-19)',
+                    data: [<?= $sumConfirmed; ?>, <?= $sumDeaths; ?>, <?= $sumRecovered; ?>],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
     </script>
 </body>
 
