@@ -42,7 +42,7 @@ require 'vendor/autoload.php';
     </nav>
 
     <div class="container text-light text-center">
-        <blockquote class="blockquote mt-5">
+        <blockquote class="blockquote mt-5 mb-5">
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
             <footer class="blockquote-footer">Data are taken from <strong>HUMANITARIAN DATA EXCHANGE</strong></footer>
         </blockquote>
@@ -108,8 +108,8 @@ require 'vendor/autoload.php';
         </tbody>
       </table>
 
-        <div class="card text-white bg-danger mb-5 mt-3 mx-auto" style="max-width: 100%;">
-            <div class="card-header font-weight-bold">Globally <br> 10 AM CET 09 March 2020* <br> Total and new cases in last 24 hours</div>
+        <div class="card text-white bg-danger mb-5 mt-5 mx-auto" style="max-width: 100%;">
+            <div class="card-header font-weight-bold">Globally <br> 10 AM CET 09 March 2020 <br> Total and new cases in last 24 hours</div>
             <div class="card-body">
                 <h5 class="card-title font-weight-bold">Confirmed</h5>
                 <p class="card-text"><?= $sumConfirmed; ?></p>
