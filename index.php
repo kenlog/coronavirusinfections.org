@@ -66,12 +66,12 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*')) + 1;
 
         <div class="col-md-3 mx-auto">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
-                <select name="filename" class="form-control mx-auto" >
+                <select name="date" class="form-control mx-auto" >
                     <option value="" selected="selected">Select by date</option>
                     <?php 
                         foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
                             $filename = basename($filename);
-                            echo "<option value='" . $filename . "'>".str_replace('.csv','', $filename)."</option>";
+                            echo "<option value='" . str_replace('.csv','', $filename) . "'>".str_replace('.csv','', $filename)."</option>";
                         }
                     ?>
                 </select> 
@@ -116,8 +116,8 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*')) + 1;
         </thead>
         <tbody>
         <?php 
-        if (!empty($_GET['filename'])) {
-            $file = 'data/csv/reports/'.$_GET['filename'];
+        if (!empty($_GET['date'])) {
+            $file = 'data/csv/reports/'.$_GET['date'].'.csv';
         } else {
             foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
                 $filename = basename($filename);
