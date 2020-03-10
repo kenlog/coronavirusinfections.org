@@ -28,6 +28,7 @@ $updateDate = '10 AM CET 09 March 2020';
     <link rel="stylesheet" href="public/css/fontawesome-all.css">
     <link rel="stylesheet" href="public/css/bootstrap-table.min.css">
     <link rel="stylesheet" href="public/css/style.css">
+    <meta name="theme-color" content="#1b1e23">
     <title>Coronavirus infections (COVID-19)</title>
 </head>
 
