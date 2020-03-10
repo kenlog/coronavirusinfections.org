@@ -36,7 +36,7 @@ $updateDate = '10 AM CET 09 March 2020';
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="<?= $host; ?>">
             <img src="public/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-            Coronavirus infections (COVID-19)
+            Coronavirus infections
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
