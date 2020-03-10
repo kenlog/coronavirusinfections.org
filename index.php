@@ -1,3 +1,9 @@
+<?php
+
+require 'vendor/autoload.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +14,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     <title>COVID-19</title>
 </head>
@@ -81,6 +89,55 @@
             <canvas id="chartSingapore" width="400"></canvas>
         </div>
     </div>
+
+    <div class="container">
+      <table 
+        id="table"
+        class="table table-hover table-sm"
+        data-toggle="table"
+        data-buttons-align="right"
+        data-show-fullscreen="true"
+        data-buttons-class="primary"
+        data-show-columns="true"
+        data-search="true"
+        data-filter-control="true"
+        data-show-search-button="true"
+        data-search-align="left"
+        data-show-search-clear-button="true">
+        <thead class="thead-light">
+          <tr>
+            <th data-field="state" data-filter-control="input">Province/State</th>
+            <th data-field="country" data-filter-control="input">Country/Region</th>
+            <th>Last Update</th>
+            <th>Confirmed</th>
+            <th>Deaths</th>
+            <th>Recovered</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php 
+          $csvFile = new Keboola\Csv\CsvReader(
+            'data/csv/03-08-2020.csv',
+            ',',
+            '"',
+            '',
+            1
+          );
+          foreach ($csvFile as $row) {
+            echo '<tr>';
+            echo '<th>'.$row[0].'</th>';
+            echo '<th>'.$row[1].'</th>';
+            echo '<th>'.$row[2].'</th>';
+            echo '<th>'.$row[3].'</th>';
+            echo '<th>'.$row[4].'</th>';
+            echo '<th>'.$row[5].'</th>';
+            echo '</tr>';
+          }
+        ?>
+        </tbody>
+      </table>
+    </div>
+
     <footer class="text-muted mt-5 mb-5">
         <div class="container">
             <p class="float-right">
@@ -103,9 +160,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 </body>
 
 </html>
