@@ -47,7 +47,7 @@ require 'vendor/autoload.php';
             <footer class="blockquote-footer">Data are taken from <strong>HUMANITARIAN DATA EXCHANGE</strong></footer>
         </blockquote>
 
-        <div id="toolbar" class="select mr-2">
+        <div id="toolbar" class="select mr-2" style="display:none">
             <select class="form-control">
                 <option value="all">Export All</option>
             </select>
