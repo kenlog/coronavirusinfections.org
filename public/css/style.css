@@ -102,3 +102,7 @@ body {
     text-decoration: none;
     background-color: #343a40;
 }
+
+.table-dark td, .table-dark th, .table-dark thead th {
+    border-color: #1b1e23;
+}
