@@ -106,3 +106,7 @@ body {
 .table-dark td, .table-dark th, .table-dark thead th {
     border-color: #1b1e23;
 }
+
+.card-view-value {
+    margin-left: 10px;
+}
