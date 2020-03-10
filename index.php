@@ -52,7 +52,7 @@ $updateDate = '10 AM CET 09 March 2020';
         <blockquote class="blockquote mt-5 mb-5">
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
             <footer class="blockquote-footer">Data are taken from <strong>HUMANITARIAN DATA EXCHANGE</strong></footer>
-            <strong><?= $updateDate; ?></strong> 
+            <strong class="text-info"><?= $updateDate; ?></strong> 
         </blockquote>
 
         <div id="toolbar" class="select mr-2" style="display:none">
