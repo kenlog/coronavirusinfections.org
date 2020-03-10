@@ -43,23 +43,28 @@ body {
     color: #343a40;
 }
 
-.form-control{
+.page-link {
     color: #ffffff;
-    background-color: rgb(27, 30, 35);
+    background-color: #343a40;
     border: none;
 }
 
-.form-control:focus {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.14);
-    border: none;
+.page-link:hover {
+    z-index: 2;
+    color: #6c757d;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
 }
 
-select {
-    text-align-last:center; 
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
 }
 
-select option {
-    color: #ffffff;
-    background: rgba(23, 28, 33, 0.787);
+.page-item.disabled .page-link {
+    background-color: rgb(202, 202, 202);
+    border-color: #dee2e6;
 }

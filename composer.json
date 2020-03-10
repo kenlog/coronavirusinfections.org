@@ -1,0 +1,5 @@
+{
+    "require": {
+        "keboola/csv": "^2.1"
+    }
+}
