@@ -129,7 +129,7 @@ require 'vendor/autoload.php';
                 </p>
             </div>
         </div>
-        
+
     </div>
 
     <footer class="text-muted mt-5 mb-5">
@@ -144,7 +144,7 @@ require 'vendor/autoload.php';
 
     <script src="public/js/jquery-3.3.1.min.js"></script>
     <script src="public/js/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="public/js/Chart.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/bootstrap-table.min.js"></script>
     <script src="public/js/bootstrap-table-filter-control.min.js"></script>
