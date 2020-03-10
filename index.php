@@ -14,7 +14,9 @@ require 'vendor/autoload.php';
 
 $host = "http://$_SERVER[HTTP_HOST]";
 
-$updateDate = '10 AM CET 09 March 2020';
+$updateDate = 'Last update 10 AM CET 09 March 2020';
+
+$contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*')) + 1;
 
 ?>
 
@@ -50,10 +52,16 @@ $updateDate = '10 AM CET 09 March 2020';
     </nav>
 
     <div class="container text-light text-center">
-        <blockquote class="blockquote mt-5 mb-5">
+        <blockquote class="blockquote mt-5 mb-4">
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
             <footer class="blockquote-footer">Data are taken from <strong>HUMANITARIAN DATA EXCHANGE</strong></footer>
             <strong class="text-info"><?= $updateDate; ?></strong> 
+            <div class="card text-white bg-info mt-3 mx-auto" style="max-width: 18rem;">
+                <div class="card-header">Days from data tracking</div>
+                <div class="card-body">
+                    <h3 class="card-title"><i class="far fa-calendar-alt"></i> <?= $contagionDays; ?></h3>
+                </div>
+            </div>
         </blockquote>
 
         <div class="col-md-3 mx-auto">
@@ -68,7 +76,7 @@ $updateDate = '10 AM CET 09 March 2020';
                     ?>
                 </select> 
                 <a class="btn btn-outline-info mt-2" href="<?= $host; ?>" role="button">Reset</a>
-                <button type="submit" class="btn btn-info mt-2">Show data</button>
+                <button type="submit" class="btn btn-info mt-2"><i class="fas fa-calendar-day"></i> Show data</button>
             </form>
         </div>
 
@@ -156,7 +164,7 @@ $updateDate = '10 AM CET 09 March 2020';
         <canvas id="globallyChart" width="100%"></canvas>
 
         <div class="card text-white bg-danger mb-5 mt-5 mx-auto" style="max-width: 100%;">
-            <div class="card-header font-weight-bold">Globally <br> <?= $updateDate; ?> <br> Total cases in last 24 hours</div>
+            <div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br> <?= $updateDate; ?> <br> <i class="fas fa-history"></i> Total cases in last 24 hours</div>
             <div class="card-body">
                 <h5 class="card-title font-weight-bold">Confirmed</h5>
                 <p class="card-text"><?= $sumConfirmed; ?></p>
@@ -165,7 +173,7 @@ $updateDate = '10 AM CET 09 March 2020';
                 <h5 class="card-title font-weight-bold">Recovered</h5>
                 <p class="card-text"><?= $sumRecovered; ?></p>
                 <hr>
-                <h5 class="card-title font-weight-bold">RISK ASSESSMENT</h5>
+                <h5 class="card-title font-weight-bold"><i class="fas fa-exclamation-triangle"></i> RISK ASSESSMENT</h5>
                 <p class="card-text">
                     China Very High <br>
                     Regional Level Very High <br>
