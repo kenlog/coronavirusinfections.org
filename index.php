@@ -150,7 +150,7 @@ $updateDate = '10 AM CET 09 March 2020';
                 <a href="#">Back to top</a>
             </p>
             <p>Data are taken from <strong><a href="https://data.humdata.org/" target="_blank">HUMANITARIAN DATA EXCHANGE</a></strong></p>
-            <small>The code of this project is open-sourced on <a href="https://github.com/kenlog/covid19">Github</a> with the MIT License.</small>
+            <small>The code of this project is open-sourced on <a href="https://github.com/kenlog/coronavirusinfections.org">Github</a> with the MIT License.</small>
         </div>
     </footer>
 
