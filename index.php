@@ -109,6 +109,8 @@ require 'vendor/autoload.php';
         </tbody>
       </table>
 
+        <canvas id="globallyChart" width="100%"></canvas>
+
         <div class="card text-white bg-danger mb-5 mt-5 mx-auto" style="max-width: 100%;">
             <div class="card-header font-weight-bold">Globally <br> 10 AM CET 09 March 2020 <br> Total cases in last 24 hours</div>
             <div class="card-body">
@@ -127,9 +129,7 @@ require 'vendor/autoload.php';
                 </p>
             </div>
         </div>
-
-        <canvas id="globallyChart" width="100%"></canvas>
-
+        
     </div>
 
     <footer class="text-muted mt-5 mb-5">
