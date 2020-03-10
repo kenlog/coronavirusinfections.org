@@ -46,7 +46,13 @@ require 'vendor/autoload.php';
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
             <footer class="blockquote-footer">Data are taken from <strong>HUMANITARIAN DATA EXCHANGE</strong></footer>
         </blockquote>
-        
+
+        <div id="toolbar" class="select mr-2">
+            <select class="form-control">
+                <option value="all">Export All</option>
+            </select>
+        </div>
+
         <table 
         id="table"
         class="table table-dark"
@@ -59,7 +65,10 @@ require 'vendor/autoload.php';
         data-show-search-button="true"
         data-search-align="left"
         data-show-search-clear-button="true"
-        data-pagination="true">
+        data-pagination="true"
+        data-click-to-select="true"
+        data-toolbar="#toolbar"
+        data-show-export="true">
         <thead class="thead-light">
           <tr>
             <th data-field="state" data-filter-control="input">Province/State</th>
@@ -135,6 +144,22 @@ require 'vendor/autoload.php';
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/bootstrap-table.min.js"></script>
     <script src="public/js/bootstrap-table-filter-control.min.js"></script>
+    <script src="public/js/tableExport.min.js"></script>
+    <script src="public/js/jspdf.min.js"></script>
+    <script src="public/js/jspdf.plugin.autotable.js"></script>
+    <script src="public/js/bootstrap-table-export.min.js"></script>
+    <script>
+        var $table = $('#table')
+
+        $(function() {
+            $('#toolbar').find('select').change(function () {
+            $table.bootstrapTable('destroy').bootstrapTable({
+                exportDataType: $(this).val(),
+                exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
+            })
+            }).trigger('change')
+        })
+    </script>
 </body>
 
 </html>
