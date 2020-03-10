@@ -56,6 +56,22 @@ $updateDate = '10 AM CET 09 March 2020';
             <strong class="text-info"><?= $updateDate; ?></strong> 
         </blockquote>
 
+        <div class="col-md-3 mx-auto">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+                <select name="filename" class="form-control mx-auto" >
+                    <option value="" selected="selected">Select by date</option>
+                    <?php 
+                        foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
+                            $filename = basename($filename);
+                            echo "<option value='" . $filename . "'>".str_replace('.csv','', $filename)."</option>";
+                        }
+                    ?>
+                </select> 
+                <a class="btn btn-outline-secondary mt-2" href="<?= $host; ?>" role="button">Reset</a>
+                <button type="submit" class="btn btn-secondary mt-2">Show data</button>
+            </form>
+        </div>
+
         <div id="toolbar" class="select mr-2" style="display:none">
             <select class="form-control">
                 <option value="all">Export All</option>
@@ -92,8 +108,16 @@ $updateDate = '10 AM CET 09 March 2020';
         </thead>
         <tbody>
         <?php 
+        if (!empty($_GET['filename'])) {
+            $file = 'data/csv/reports/'.$_GET['filename'];
+        } else {
+            foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
+                $filename = basename($filename);
+                $file = 'data/csv/reports/'.$filename;
+            }
+        }
           $csvFile = new Keboola\Csv\CsvReader(
-            'data/csv/reports/03-09-2020.csv',
+            $file,
             ',', // delimiter
             '"', // enclosure
             '', // escapedBy
@@ -115,9 +139,15 @@ $updateDate = '10 AM CET 09 March 2020';
             echo '<th>'.$row[4].'</th>';
             echo '<th>'.$row[5].'</th>';
             echo '</tr>';
-            $sumConfirmed += $row[3];
-            $sumDeaths += $row[4];
-            $sumRecovered += $row[5];
+            if ($row[3] > 0) {
+                $sumConfirmed += $row[3];
+            }
+            if ($row[4] > 0) {
+                $sumDeaths += $row[4];
+            }
+            if ($row[5] > 0) {
+                $sumRecovered += $row[5];
+            }
           }
         ?>
         </tbody>
