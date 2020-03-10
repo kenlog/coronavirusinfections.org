@@ -67,8 +67,8 @@ $updateDate = '10 AM CET 09 March 2020';
                         }
                     ?>
                 </select> 
-                <a class="btn btn-outline-secondary mt-2" href="<?= $host; ?>" role="button">Reset</a>
-                <button type="submit" class="btn btn-secondary mt-2">Show data</button>
+                <a class="btn btn-outline-info mt-2" href="<?= $host; ?>" role="button">Reset</a>
+                <button type="submit" class="btn btn-info mt-2">Show data</button>
             </form>
         </div>
 
