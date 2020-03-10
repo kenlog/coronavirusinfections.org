@@ -46,26 +46,6 @@ require 'vendor/autoload.php';
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
             <footer class="blockquote-footer">Data are taken from <strong>HUMANITARIAN DATA EXCHANGE</strong></footer>
         </blockquote>
-        <div class="card text-white bg-danger mb-5 mt-3 mx-auto" style="max-width: 25rem;">
-            <div class="card-header font-weight-bold">Globally <br> 10 AM CET 09 March 2020* <br> Total and new cases in last 24 hours</div>
-            <div class="card-body">
-                <h5 class="card-title font-weight-bold">Confirmed</h5>
-                <p class="card-text">109 577</p>
-                <h5 class="card-title font-weight-bold">New</h5>
-                <p class="card-text">3993 </p>
-                <h5 class="card-title font-weight-bold">Deaths</h5>
-                <p class="card-text">3809</p>
-                <h5 class="card-title font-weight-bold">New</h5>
-                <p class="card-text">225</p>
-                <hr>
-                <h5 class="card-title font-weight-bold">RISK ASSESSMENT</h5>
-                <p class="card-text">
-                    China Very High <br>
-                    Regional Level Very High <br>
-                    Global Level Very High
-                </p>
-            </div>
-        </div>
         
         <table 
         id="table"
@@ -99,6 +79,9 @@ require 'vendor/autoload.php';
             '', // escapedBy
             1 // skipLines
           );
+          $sumConfirmed = 0;
+          $sumDeaths = 0;
+          $sumRecovered = 0;
           foreach ($csvFile as $row) {
             echo '<tr>';
             echo '<th>'.$row[0].'</th>';
@@ -108,10 +91,33 @@ require 'vendor/autoload.php';
             echo '<th>'.$row[4].'</th>';
             echo '<th>'.$row[5].'</th>';
             echo '</tr>';
+            $sumConfirmed += $row[3];
+            $sumDeaths += $row[4];
+            $sumRecovered += $row[5];
           }
         ?>
         </tbody>
       </table>
+
+        <div class="card text-white bg-danger mb-5 mt-3 mx-auto" style="max-width: 100%;">
+            <div class="card-header font-weight-bold">Globally <br> 10 AM CET 09 March 2020* <br> Total and new cases in last 24 hours</div>
+            <div class="card-body">
+                <h5 class="card-title font-weight-bold">Confirmed</h5>
+                <p class="card-text"><?= $sumConfirmed; ?></p>
+                <h5 class="card-title font-weight-bold">Deaths</h5>
+                <p class="card-text"><?= $sumDeaths; ?></p>
+                <h5 class="card-title font-weight-bold">Recovered</h5>
+                <p class="card-text"><?= $sumRecovered; ?></p>
+                <hr>
+                <h5 class="card-title font-weight-bold">RISK ASSESSMENT</h5>
+                <p class="card-text">
+                    China Very High <br>
+                    Regional Level Very High <br>
+                    Global Level Very High
+                </p>
+            </div>
+        </div>
+
     </div>
 
     <footer class="text-muted mt-5 mb-5">
