@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * This file is part of the Covid19 project.
+ * 
+ * @author Valentino Pesce
+ * @copyright (c) Valentino Pesce <valentino@iltuobrand.it>
+ * 
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 require 'vendor/autoload.php';
 
 ?>
