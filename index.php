@@ -14,6 +14,8 @@ require 'vendor/autoload.php';
 
 $host = "http://$_SERVER[HTTP_HOST]";
 
+$updateDate = '10 AM CET 09 March 2020';
+
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +52,7 @@ $host = "http://$_SERVER[HTTP_HOST]";
         <blockquote class="blockquote mt-5 mb-5">
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
             <footer class="blockquote-footer">Data are taken from <strong>HUMANITARIAN DATA EXCHANGE</strong></footer>
+            <strong><?= $updateDate; ?></strong> 
         </blockquote>
 
         <div id="toolbar" class="select mr-2" style="display:none">
@@ -121,7 +124,7 @@ $host = "http://$_SERVER[HTTP_HOST]";
         <canvas id="globallyChart" width="100%"></canvas>
 
         <div class="card text-white bg-danger mb-5 mt-5 mx-auto" style="max-width: 100%;">
-            <div class="card-header font-weight-bold">Globally <br> 10 AM CET 09 March 2020 <br> Total cases in last 24 hours</div>
+            <div class="card-header font-weight-bold">Globally <br> <?= $updateDate; ?> <br> Total cases in last 24 hours</div>
             <div class="card-body">
                 <h5 class="card-title font-weight-bold">Confirmed</h5>
                 <p class="card-text"><?= $sumConfirmed; ?></p>
@@ -147,7 +150,7 @@ $host = "http://$_SERVER[HTTP_HOST]";
                 <a href="#">Back to top</a>
             </p>
             <p>Data are taken from <strong><a href="https://data.humdata.org/" target="_blank">HUMANITARIAN DATA EXCHANGE</a></strong></p>
-            <small>The code of this project is open-sourced on Github with the MIT License.</small>
+            <small>The code of this project is open-sourced on <a href="https://github.com/kenlog/covid19">Github</a> with the MIT License.</small>
         </div>
     </footer>
 
