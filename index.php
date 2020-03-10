@@ -78,6 +78,7 @@ $updateDate = '10 AM CET 09 March 2020';
         data-click-to-select="true"
         data-toolbar="#toolbar"
         data-mobile-responsive="true"
+        data-show-toggle="true"
         data-show-export="true">
         <thead class="thead-light">
           <tr>
