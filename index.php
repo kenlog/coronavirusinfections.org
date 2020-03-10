@@ -68,6 +68,7 @@ require 'vendor/autoload.php';
         data-pagination="true"
         data-click-to-select="true"
         data-toolbar="#toolbar"
+        data-mobile-responsive="true"
         data-show-export="true">
         <thead class="thead-light">
           <tr>
@@ -148,6 +149,7 @@ require 'vendor/autoload.php';
     <script src="public/js/jspdf.min.js"></script>
     <script src="public/js/jspdf.plugin.autotable.js"></script>
     <script src="public/js/bootstrap-table-export.min.js"></script>
+    <script src="public/js/bootstrap-table-mobile.min.js"></script>
     <script>
         var $table = $('#table')
 
