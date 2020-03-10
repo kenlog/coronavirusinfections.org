@@ -96,3 +96,9 @@ body {
     text-decoration: none;
     background-color: #343a40;
 }
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #343a40;
+}
