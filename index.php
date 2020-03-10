@@ -24,14 +24,14 @@ require 'vendor/autoload.php';
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/bootstrap-table.min.css">
     <link rel="stylesheet" href="public/css/style.css">
-    <title>COVID-19</title>
+    <title>Coronavirus infections (COVID-19)</title>
 </head>
 
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
             <img src="public/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-            COVID-19
+            Coronavirus infections (COVID-19)
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
