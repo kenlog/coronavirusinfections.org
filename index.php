@@ -195,7 +195,9 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
             <p class="float-right">
                 <a href="#">Back to top</a>
             </p>
-            <p>Data are taken from <strong><a href="https://data.humdata.org/" target="_blank">HUMANITARIAN DATA EXCHANGE</a></strong></p>
+            <div>
+                <small>Data are taken from <strong><a href="https://data.humdata.org/" target="_blank">HUMANITARIAN DATA EXCHANGE</a></strong></small>
+            </div>
             <div>
                 <small>This website disclaims any representation and warranty regarding the data shown, including accuracy, suitability for use and marketability.</small>
             </div>
