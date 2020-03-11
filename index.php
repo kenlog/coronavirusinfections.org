@@ -82,7 +82,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
 
         <div class="col-md-3 mx-auto">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-                <select name="date" class="form-control mx-auto" >
+                <select name="date" class="form-control mx-auto" required>
                     <option value="" selected="selected">Select by date</option>
                     <?php 
                         foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
