@@ -16,7 +16,7 @@ $host = "http://$_SERVER[HTTP_HOST]";
 
 $updateDate = 'Last update 10 AM CET 10 March 2020';
 
-$contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*')) + 1;
+$contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
 
 ?>
 
