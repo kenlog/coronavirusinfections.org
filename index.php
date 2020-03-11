@@ -54,7 +54,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
     <div class="container text-light text-center">
         <blockquote class="blockquote mt-5 mb-4">
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
-            <footer class="blockquote-footer">Data are taken from <strong>HUMANITARIAN DATA EXCHANGE</strong></footer>
+            <footer class="blockquote-footer">Data are taken from HUMANITARIAN DATA EXCHANGE <br> <strong>dataset provided by JHU CSSE</strong></footer>
             <strong class="text-info"><?= $updateDate; ?></strong> 
             <div class="card text-white bg-info mt-3 mx-auto" style="max-width: 18rem;">
                 <div class="card-header">Days from data tracking</div>
