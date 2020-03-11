@@ -110,3 +110,9 @@ body {
 .card-view-value {
     margin-left: 10px;
 }
+
+select {
+    text-align: center;
+    text-align-last: center;
+    -moz-text-align-last: center;
+}
