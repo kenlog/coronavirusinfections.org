@@ -29,7 +29,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/fontawesome-all.css">
     <link rel="stylesheet" href="public/css/bootstrap-table.min.css">
-    <link rel="stylesheet" href="public/css/style.css?v=2">
+    <link rel="stylesheet" href="public/css/style.css?v=3">
     <title>Coronavirus infections (COVID-19)</title>
     <meta name="description" content="Health information on coronavirus infections with detailed live statistics from around the world.">
     <link rel="apple-touch-icon" sizes="57x57" href="public/icons/apple-icon-57x57.png">
@@ -91,8 +91,8 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                         }
                     ?>
                 </select> 
-                <a class="btn btn-outline-info mt-2" href="<?= $host; ?>" role="button">Last update</a>
-                <button type="submit" class="btn btn-info mt-2"><i class="fas fa-calendar-day"></i> Show data</button>
+                <a class="btn btn-secondary mt-2" href="<?= $host; ?>" role="button">Last update</a>
+                <button type="submit" class="btn btn-secondary mt-2"><i class="fas fa-calendar-day"></i> Show data</button>
             </form>
         </div>
 
