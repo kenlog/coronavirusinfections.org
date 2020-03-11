@@ -196,7 +196,12 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                 <a href="#">Back to top</a>
             </p>
             <p>Data are taken from <strong><a href="https://data.humdata.org/" target="_blank">HUMANITARIAN DATA EXCHANGE</a></strong></p>
-            <small>The code of this project is open-sourced on <a href="https://github.com/kenlog/coronavirusinfections.org">Github</a> with the MIT License.</small>
+            <div>
+                <small>This website disclaims any representation and warranty regarding the data shown, including accuracy, suitability for use and marketability.</small>
+            </div>
+            <div>
+                <small>The code of this project is open-sourced on <a href="https://github.com/kenlog/coronavirusinfections.org">Github</a> with the MIT License.</small>
+            </div>
         </div>
     </footer>
 
