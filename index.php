@@ -65,7 +65,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         </blockquote>
 
         <div class="col-md-3 mx-auto">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                 <select name="date" class="form-control mx-auto" >
                     <option value="" selected="selected">Select by date</option>
                     <?php 
@@ -116,8 +116,8 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         </thead>
         <tbody>
         <?php 
-        if (!empty($_GET['date'])) {
-            $file = 'data/csv/reports/'.$_GET['date'].'.csv';
+        if (!empty($_POST['date'])) {
+            $file = 'data/csv/reports/'.$_POST['date'].'.csv';
         } else {
             foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
                 $filename = basename($filename);
@@ -165,8 +165,8 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
 
         <div class="card text-white bg-danger mb-5 mt-5 mx-auto" style="max-width: 100%;">
             <?php 
-                if (!empty($_GET['date'])) {
-                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br><i class="fas fa-history"></i> '.$_GET['date'].' <br> </div>';
+                if (!empty($_POST['date'])) {
+                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br><i class="fas fa-history"></i> '.$_POST['date'].' <br> </div>';
                 } else {
                     echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br> '.$updateDate.' <br> <i class="fas fa-history"></i> Total cases in last 24 hours</div>';
                 }
