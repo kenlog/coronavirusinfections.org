@@ -32,6 +32,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
     <link rel="stylesheet" href="public/css/style.css">
     <meta name="theme-color" content="#1b1e23">
     <title>Coronavirus infections (COVID-19)</title>
+    <meta name="description" content="Health information on coronavirus infections with detailed live statistics from around the world.">
 </head>
 
 <body>
