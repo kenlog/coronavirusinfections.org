@@ -14,7 +14,9 @@ require 'vendor/autoload.php';
 
 $host = "http://$_SERVER[HTTP_HOST]";
 
-$updateDate = '10 AM CET 09 March 2020';
+$updateDate = 'Last update 10 AM CET 10 March 2020';
+
+$contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*')) + 1;
 
 ?>
 
@@ -50,11 +52,33 @@ $updateDate = '10 AM CET 09 March 2020';
     </nav>
 
     <div class="container text-light text-center">
-        <blockquote class="blockquote mt-5 mb-5">
+        <blockquote class="blockquote mt-5 mb-4">
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
             <footer class="blockquote-footer">Data are taken from <strong>HUMANITARIAN DATA EXCHANGE</strong></footer>
             <strong class="text-info"><?= $updateDate; ?></strong> 
+            <div class="card text-white bg-info mt-3 mx-auto" style="max-width: 18rem;">
+                <div class="card-header">Days from data tracking</div>
+                <div class="card-body">
+                    <h3 class="card-title"><i class="far fa-calendar-alt"></i> <?= $contagionDays; ?></h3>
+                </div>
+            </div>
         </blockquote>
+
+        <div class="col-md-3 mx-auto">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+                <select name="date" class="form-control mx-auto" >
+                    <option value="" selected="selected">Select by date</option>
+                    <?php 
+                        foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
+                            $filename = basename($filename);
+                            echo "<option value='" . str_replace('.csv','', $filename) . "'>".str_replace('.csv','', $filename)."</option>";
+                        }
+                    ?>
+                </select> 
+                <a class="btn btn-outline-info mt-2" href="<?= $host; ?>" role="button">Reset</a>
+                <button type="submit" class="btn btn-info mt-2"><i class="fas fa-calendar-day"></i> Show data</button>
+            </form>
+        </div>
 
         <div id="toolbar" class="select mr-2" style="display:none">
             <select class="form-control">
@@ -92,8 +116,16 @@ $updateDate = '10 AM CET 09 March 2020';
         </thead>
         <tbody>
         <?php 
+        if (!empty($_GET['date'])) {
+            $file = 'data/csv/reports/'.$_GET['date'].'.csv';
+        } else {
+            foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
+                $filename = basename($filename);
+                $file = 'data/csv/reports/'.$filename;
+            }
+        }
           $csvFile = new Keboola\Csv\CsvReader(
-            'data/csv/reports/03-09-2020.csv',
+            $file,
             ',', // delimiter
             '"', // enclosure
             '', // escapedBy
@@ -115,9 +147,15 @@ $updateDate = '10 AM CET 09 March 2020';
             echo '<th>'.$row[4].'</th>';
             echo '<th>'.$row[5].'</th>';
             echo '</tr>';
-            $sumConfirmed += $row[3];
-            $sumDeaths += $row[4];
-            $sumRecovered += $row[5];
+            if ($row[3] > 0) {
+                $sumConfirmed += $row[3];
+            }
+            if ($row[4] > 0) {
+                $sumDeaths += $row[4];
+            }
+            if ($row[5] > 0) {
+                $sumRecovered += $row[5];
+            }
           }
         ?>
         </tbody>
@@ -126,7 +164,13 @@ $updateDate = '10 AM CET 09 March 2020';
         <canvas id="globallyChart" width="100%"></canvas>
 
         <div class="card text-white bg-danger mb-5 mt-5 mx-auto" style="max-width: 100%;">
-            <div class="card-header font-weight-bold">Globally <br> <?= $updateDate; ?> <br> Total cases in last 24 hours</div>
+            <?php 
+                if (!empty($_GET['date'])) {
+                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br><i class="fas fa-history"></i> '.$_GET['date'].' <br> </div>';
+                } else {
+                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br> '.$updateDate.' <br> <i class="fas fa-history"></i> Total cases in last 24 hours</div>';
+                }
+            ?>
             <div class="card-body">
                 <h5 class="card-title font-weight-bold">Confirmed</h5>
                 <p class="card-text"><?= $sumConfirmed; ?></p>
@@ -135,7 +179,7 @@ $updateDate = '10 AM CET 09 March 2020';
                 <h5 class="card-title font-weight-bold">Recovered</h5>
                 <p class="card-text"><?= $sumRecovered; ?></p>
                 <hr>
-                <h5 class="card-title font-weight-bold">RISK ASSESSMENT</h5>
+                <h5 class="card-title font-weight-bold"><i class="fas fa-exclamation-triangle"></i> RISK ASSESSMENT</h5>
                 <p class="card-text">
                     China Very High <br>
                     Regional Level Very High <br>
