@@ -222,6 +222,9 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
             <div>
                 <small>The code of this project is open-sourced on <a href="https://github.com/kenlog/coronavirusinfections.org">Github</a> with the MIT License.</small>
             </div>
+            <div>
+                <small>Icon made by Freepik from www.flaticon.com</small>
+            </div>
         </div>
     </footer>
 
