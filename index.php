@@ -117,7 +117,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         </thead>
         <tbody>
         <?php 
-        if (!empty($_POST['date'])) {
+        if (!empty($_POST['date']) && file_exists('data/csv/reports/'.$_POST['date'].'.csv')) {
             $file = 'data/csv/reports/'.$_POST['date'].'.csv';
         } else {
             foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
