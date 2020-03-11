@@ -184,7 +184,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                 if (!empty($_POST['date'])) {
                     echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br><i class="fas fa-history"></i> '.$_POST['date'].' <br> </div>';
                 } else {
-                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br> '.$updateDate.' <br> <i class="fas fa-history"></i> Total cases in last 24 hours</div>';
+                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br> '.$updateDate.' <br> <i class="fas fa-history"></i> Total cases</div>';
                 }
             ?>
             <div class="card-body">
