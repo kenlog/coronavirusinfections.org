@@ -45,7 +45,6 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
     <link rel="icon" type="image/png" sizes="32x32" href="public/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="public/icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="public/icons/favicon-16x16.png">
-    <link rel="manifest" href="public/icons/manifest.json">
     <meta name="msapplication-TileColor" content="#1b1e23">
     <meta name="msapplication-TileImage" content="public/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#1b1e23">
