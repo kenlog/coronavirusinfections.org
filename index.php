@@ -192,10 +192,10 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
             <div class="card-body">
                 <h5 class="card-title font-weight-bold">Confirmed</h5>
                 <p class="card-text"><?= $sumConfirmed; ?></p>
-                <h5 class="card-title font-weight-bold">Deaths</h5>
-                <p class="card-text"><?= $sumDeaths; ?></p>
                 <h5 class="card-title font-weight-bold">Recovered</h5>
                 <p class="card-text"><?= $sumRecovered; ?></p>
+                <h5 class="card-title font-weight-bold">Deaths</h5>
+                <p class="card-text"><?= $sumDeaths; ?></p>
                 <hr>
                 <h5 class="card-title font-weight-bold"><i class="fas fa-exclamation-triangle"></i> RISK ASSESSMENT</h5>
                 <p class="card-text">
