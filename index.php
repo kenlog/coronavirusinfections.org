@@ -274,10 +274,10 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         var globallyChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Confirmed', 'Deaths', 'Recovered'],
+                labels: ['Confirmed', 'Recovered', 'Deaths'],
                 datasets: [{
                     label: 'Situation reports (COVID-19) <?= $date; ?>',
-                    data: [<?= $sumConfirmed; ?>, <?= $sumDeaths; ?>, <?= $sumRecovered; ?>],
+                    data: [<?= $sumConfirmed; ?>, <?= $sumRecovered; ?>, <?= $sumDeaths; ?>],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(213, 51, 66, 0.2)',
