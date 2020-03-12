@@ -78,18 +78,16 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         <div class="row mb-5">
             <div class="col-sm-6 mb-2">
                 <div class="card text-white bg-info">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Days from data tracking</b></h5>
-                    <p class="card-text"><i class="far fa-calendar-alt"></i> <?= $contagionDays; ?></p>
-                </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Days from data tracking</b> <br> <i class="far fa-calendar-alt"></i> <?= $contagionDays; ?></h5>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-6 mb-2">
                 <div class="card text-white bg-success">
-                <div class="card-body">
-                    <h5 class="card-title"><i class="fas fa-stopwatch"></i> <b>Next update</b> <br> <?= $nextUpdate; ?></h5>
-                    <p class="card-text"></p>
-                </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-stopwatch"></i> <b>Next update</b> <br> <?= $nextUpdate; ?></h5>
+                    </div>
                 </div>
             </div>
         </div>
