@@ -139,10 +139,8 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         if (!empty($_POST['date']) && file_exists('data/csv/reports/'.$_POST['date'].'.csv')) {
             $file = 'data/csv/reports/'.$_POST['date'].'.csv';
         } else {
-            foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
-                $filename = basename($filename);
-                $file = 'data/csv/reports/'.$filename;
-            }
+            $files = glob('data/csv/reports/*');
+            $file = end($files);
         }
           $csvFile = new Keboola\Csv\CsvReader(
             $file,
@@ -242,6 +240,17 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
     <script src="public/js/jspdf.plugin.autotable.js"></script>
     <script src="public/js/bootstrap-table-export.min.js"></script>
     <script src="public/js/bootstrap-table-mobile.min.js"></script>
+    <?php
+        if (!empty($_POST['date'])) {
+            $date = $_POST['date'];
+        } else {
+            $files = glob('data/csv/reports/*');
+            $lastFile = end($files);
+            $lastFile = str_replace('data/csv/reports/','',$lastFile);
+            $lastFile = str_replace('.csv','',$lastFile);
+            $date = $lastFile;
+        }
+    ?>
     <script>
         var $table = $('#table')
 
@@ -251,7 +260,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                     exportDataType: $(this).val(),
                     exportOptions: {
                         fileName: function () {
-                            return 'Situation reports (COVID-19)'
+                            return 'Situation reports (COVID-19) <?= $date; ?>'
                         },
                         preventInjection: false
                     },
