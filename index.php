@@ -276,7 +276,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
             data: {
                 labels: ['Confirmed', 'Deaths', 'Recovered'],
                 datasets: [{
-                    label: 'Situation reports (COVID-19)',
+                    label: 'Situation reports (COVID-19) <?= $date; ?>',
                     data: [<?= $sumConfirmed; ?>, <?= $sumDeaths; ?>, <?= $sumRecovered; ?>],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.2)',
