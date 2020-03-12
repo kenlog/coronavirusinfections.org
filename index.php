@@ -130,8 +130,8 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
             <th data-field="country" data-filter-control="input">Country/Region</th>
             <th data-field="data" data-filter-control="select">Last Update</th>
             <th>Confirmed</th>
-            <th>Deaths</th>
             <th>Recovered</th>
+            <th>Deaths</th>
           </tr>
         </thead>
         <tbody>
@@ -162,8 +162,8 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
             echo '<th>'.$row[1].'</th>';
             echo '<th>'.$row[2].'</th>';
             echo '<th>'.$row[3].'</th>';
-            echo '<th>'.$row[4].'</th>';
             echo '<th>'.$row[5].'</th>';
+            echo '<th>'.$row[4].'</th>';
             echo '</tr>';
             if ($row[3] > 0) {
                 $sumConfirmed += $row[3];
