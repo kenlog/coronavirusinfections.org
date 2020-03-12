@@ -73,20 +73,30 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         <blockquote class="blockquote mt-5 mb-4">
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
             <footer class="blockquote-footer">Data are taken from HUMANITARIAN DATA EXCHANGE <br> <strong>dataset provided by JHU CSSE</strong></footer>
-            
-            <div class="card text-white bg-info mt-3 mx-auto" style="max-width: 18rem;">
-                <div class="card-header font-weight-bold">Days from data tracking</div>
-                <div class="card-body">
-                    <h3 class="card-title"><i class="far fa-calendar-alt"></i> <?= $contagionDays; ?></h3>
-                    <h5 class="card-title"><i class="fas fa-clock"></i> <b>Last data update:</b> <br> <?= $updateDate; ?></h5>
-                    <h5 class="card-title"><i class="fas fa-stopwatch"></i> <b>Next update:</b> <br> <?= $nextUpdate; ?></h5>
-                </div>
-            </div>
         </blockquote>
 
-        <div class="col-md-3 mx-auto">
+        <div class="row mb-5">
+            <div class="col-sm-6 mb-2">
+                <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h5 class="card-title"><b>Days from data tracking</b></h5>
+                    <p class="card-text"><i class="far fa-calendar-alt"></i> <?= $contagionDays; ?></p>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-2">
+                <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-stopwatch"></i> <b>Next update</b> <br> <?= $nextUpdate; ?></h5>
+                    <p class="card-text"></p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mx-auto mb-3">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-                <select name="date" class="form-control mx-auto" required>
+                <select name="date" class="form-control" required>
                     <option value="" selected="selected">Select by date</option>
                     <?php 
                         foreach(glob(dirname(__FILE__) . '/data/csv/reports/*') as $filename){
@@ -95,8 +105,8 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                         }
                     ?>
                 </select> 
-                <a class="btn btn-secondary mt-2" href="<?= $host; ?>" role="button">Last update</a>
-                <button type="submit" class="btn btn-secondary mt-2"><i class="fas fa-calendar-day"></i> Show data</button>
+                <a class="btn btn-secondary mt-2" href="<?= $host; ?>" role="button">Last data update <?= $updateDate; ?></a>
+                <button type="submit" class="btn btn-secondary mt-2"><i class="fas fa-calendar-day"></i> Show selected date</button>
             </form>
         </div>
 
