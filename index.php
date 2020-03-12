@@ -14,7 +14,9 @@ require 'vendor/autoload.php';
 
 $host = "http://$_SERVER[HTTP_HOST]";
 
-$updateDate = 'Last update 10 AM CET 10 March 2020';
+$updateDate = '10 AM CET 11 March 2020';
+
+$nextUpdate = '10 AM CET 13 March 2020'; 
 
 $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
 
@@ -71,11 +73,13 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         <blockquote class="blockquote mt-5 mb-4">
             <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
             <footer class="blockquote-footer">Data are taken from HUMANITARIAN DATA EXCHANGE <br> <strong>dataset provided by JHU CSSE</strong></footer>
-            <strong class="text-info"><?= $updateDate; ?></strong> 
+            
             <div class="card text-white bg-info mt-3 mx-auto" style="max-width: 18rem;">
-                <div class="card-header">Days from data tracking</div>
+                <div class="card-header font-weight-bold">Days from data tracking</div>
                 <div class="card-body">
                     <h3 class="card-title"><i class="far fa-calendar-alt"></i> <?= $contagionDays; ?></h3>
+                    <h5 class="card-title"><i class="fas fa-clock"></i> Last data update: <br> <?= $updateDate; ?></h5>
+                    <h5 class="card-title"><i class="fas fa-stopwatch"></i> Next data update: <br> <?= $nextUpdate; ?></h5>
                 </div>
             </div>
         </blockquote>
@@ -184,7 +188,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                 if (!empty($_POST['date'])) {
                     echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br><i class="fas fa-history"></i> '.$_POST['date'].' <br> </div>';
                 } else {
-                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br> '.$updateDate.' <br> <i class="fas fa-history"></i> Total cases</div>';
+                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br> Last data update: '.$updateDate.' <br> <i class="fas fa-history"></i> Total cases</div>';
                 }
             ?>
             <div class="card-body">
