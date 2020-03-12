@@ -280,13 +280,13 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                     data: [<?= $sumConfirmed; ?>, <?= $sumRecovered; ?>, <?= $sumDeaths; ?>],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.2)',
-                        'rgba(213, 51, 66, 0.2)',
-                        'rgba(255, 206, 86, 0.2)'
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(213, 51, 66, 0.2)'
                     ],
                     borderColor: [
                         'rgba(54, 162, 235, 1)',
-                        'rgba(213, 51, 66, 1)',
-                        'rgba(255, 206, 86, 1)'
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(213, 51, 66, 1)'
                     ],
                     borderWidth: 1
                 }]
