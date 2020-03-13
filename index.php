@@ -14,9 +14,9 @@ require 'vendor/autoload.php';
 
 $host = "http://$_SERVER[HTTP_HOST]";
 
-$updateDate = '11 March 2020';
+$updateDate = '12 March 2020';
 
-$nextUpdate = '10 AM CET 13 March 2020'; 
+$nextUpdate = '10 AM CET 14 March 2020'; 
 
 $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
 
