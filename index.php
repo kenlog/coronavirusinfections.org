@@ -221,7 +221,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
 
         <blockquote class="blockquote mt-5 mb-4">
             <p class="mb-0"></p>
-            <footer class="blockquote-footer">Data are taken from <strong><a href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases" target="_blank">HUMANITARIAN DATA EXCHANGE</a> <br> <strong>dataset provided by JHU CSSE</strong></footer>
+            <footer class="blockquote-footer">Data are taken from <strong><a href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases" target="_blank">HUMANITARIAN DATA EXCHANGE</a> <br> dataset provided by JHU CSSE</strong></footer>
             <div>
                 <small class="text-muted">This website disclaims any representation and warranty regarding the data shown, including accuracy, suitability for use and marketability.</small>
             </div>
