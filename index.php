@@ -108,7 +108,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                         }
                     ?>
                 </select> 
-                <a class="btn btn-secondary mt-2" href="<?= $host; ?>" role="button"><i class="far fa-calendar-check"></i> Last data update <?= $updateDate; ?></a>
+                <a class="btn btn-secondary mt-2" href="<?= $host; ?>#table" role="button"><i class="far fa-calendar-check"></i> Last data update <?= $updateDate; ?></a>
                 <button type="submit" class="btn btn-secondary mt-2"><i class="fas fa-calendar-day"></i> Show selected date</button>
             </form>
         </div>
