@@ -64,7 +64,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="https://www.who.int/" target="_blank">World Health Organization</a>
+                <a class="nav-item nav-link" href="https://www.who.int/" target="_blank" rel="noreferrer">World Health Organization</a>
             </div>
         </div>
     </nav>
@@ -221,13 +221,17 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
 
         <blockquote class="blockquote mt-5 mb-4">
             <p class="mb-0"></p>
-            <footer class="blockquote-footer">Data are taken from <strong><a href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases" target="_blank">HUMANITARIAN DATA EXCHANGE</a> <br> dataset provided by JHU CSSE</strong></footer>
+            <footer class="blockquote-footer">Data are taken from <strong><a href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases" target="_blank">HUMANITARIAN DATA EXCHANGE</a> dataset provided by JHU CSSE</strong></footer>
             <div>
                 <small class="text-muted">This website disclaims any representation and warranty regarding the data shown, including accuracy, suitability for use and marketability.</small>
             </div>
         </blockquote>
 
         <hr style="background:#343a40">
+
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
 
     </div>
 
@@ -239,9 +243,6 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
             <div>
                 <small>Logo icon made by Freepik from www.flaticon.com</small>
             </div>
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
         </div>
     </footer>
 
