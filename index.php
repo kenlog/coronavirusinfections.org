@@ -98,7 +98,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         </div>
 
         <div class="col-md-6 mx-auto mb-3">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#table" method="post">
                 <select name="date" class="form-control" required>
                     <option value="" selected="selected">Select by date</option>
                     <?php 
