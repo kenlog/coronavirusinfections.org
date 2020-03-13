@@ -1,4 +1,7 @@
-## coronavirusinfections.org
+![GitHub](https://img.shields.io/github/license/kenlog/coronavirusinfections.org?style=for-the-badge)
+![Website](https://img.shields.io/website?down_message=offline&style=for-the-badge&up_message=online&url=https%3A%2F%2Fcoronavirusinfections.org%2F)
+
+[coronavirusinfections.org](https://coronavirusinfections.org/)
 # Coronavirus infections (COVID-19) Cases
 
 ## Data Source
