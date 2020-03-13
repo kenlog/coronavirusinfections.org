@@ -71,7 +71,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
 
     <div class="container text-dark text-center">
         
-        <div class="jumbotron jumbotron-fluid mt-5">
+        <div class="jumbotron jumbotron-fluid mt-5 bg-info text-light">
             <div class="container">
                 <h3 class="font-weight-bold">Coronavirus disease (COVID-19) situation reports</h3>
                 <p class="lead">A pneumonia of unknown cause detected in Wuhan, China was first reported to the <br> WHO Country Office in China on 31 December 2019.</p>
@@ -89,7 +89,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                 </div>
             </div>
             <div class="col-sm-6 mb-2">
-                <div class="card text-white bg-success">
+                <div class="card text-white bg-info">
                     <div class="card-body">
                         <h5 class="card-title"><i class="fas fa-stopwatch"></i> <b>Next update</b> <br> <?= $nextUpdate; ?></h5>
                     </div>
