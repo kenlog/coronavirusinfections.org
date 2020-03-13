@@ -24,6 +24,10 @@ body {
     background-color: rgb(0, 74, 17)!important;
 }
 
+.jumbotron {
+    background-color: #e9ecef;
+}
+
 .table-dark {
     color: #fff;
     background-color: #182833;

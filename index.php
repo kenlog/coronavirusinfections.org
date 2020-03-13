@@ -31,7 +31,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/fontawesome-all.css">
     <link rel="stylesheet" href="public/css/bootstrap-table.min.css">
-    <link rel="stylesheet" href="public/css/style.css?v=4">
+    <link rel="stylesheet" href="public/css/style.css?v=5">
     <title>Coronavirus infections (COVID-19)</title>
     <meta name="description" content=" Health information on coronavirus infections with detailed statistics from around the world. Data can be exported in 7 different formats.">
     <link rel="apple-touch-icon" sizes="57x57" href="public/icons/apple-icon-57x57.png">
@@ -69,11 +69,16 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         </div>
     </nav>
 
-    <div class="container text-light text-center">
-        <blockquote class="blockquote mt-5 mb-4">
-            <p class="mb-0">Coronavirus disease (COVID-19) situation reports</p>
-            <footer class="blockquote-footer">Data are taken from HUMANITARIAN DATA EXCHANGE <br> <strong>dataset provided by JHU CSSE</strong></footer>
-        </blockquote>
+    <div class="container text-dark text-center">
+        
+        <div class="jumbotron jumbotron-fluid mt-5">
+            <div class="container">
+                <h3 class="font-weight-bold">Coronavirus disease (COVID-19) situation reports</h3>
+                <p class="lead">A pneumonia of unknown cause detected in Wuhan, China was first reported to the <br> WHO Country Office in China on 31 December 2019.</p>
+                <p class="lead">The outbreak was declared a Public Health Emergency of International Concern on 30 January 2020.</p>
+                <p class="lead">On 11 February 2020, WHO announced a name for the new coronavirus disease: COVID-19</p>
+            </div>
+        </div>
 
         <div class="row mb-5">
             <div class="col-sm-6 mb-2">
@@ -214,26 +219,29 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
             </div>
         </div>
 
+        <blockquote class="blockquote mt-5 mb-4">
+            <p class="mb-0"></p>
+            <footer class="blockquote-footer">Data are taken from <strong><a href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases" target="_blank">HUMANITARIAN DATA EXCHANGE</a> <br> <strong>dataset provided by JHU CSSE</strong></footer>
+            <div>
+                <small class="text-muted">This website disclaims any representation and warranty regarding the data shown, including accuracy, suitability for use and marketability.</small>
+            </div>
+        </blockquote>
+
+        <hr style="background:#343a40">
+
     </div>
 
     <footer class="text-muted mt-5 mb-5">
         <div class="container">
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
-            <div>
-                <small>Data are taken from: <br> <strong><a href="https://data.humdata.org/" target="_blank">HUMANITARIAN DATA EXCHANGE</a> <br> Dataset provided by JHU CSSE</strong></small>
-            </div>
-            <hr style="background:#343a40">
-            <div>
-                <small>This website disclaims any representation and warranty regarding the data shown, including accuracy, suitability for use and marketability.</small>
-            </div>
             <div>
                 <small>The code of this project is open-sourced on <a href="https://github.com/kenlog/coronavirusinfections.org">Github</a> with the MIT License.</small>
             </div>
             <div>
                 <small>Logo icon made by Freepik from www.flaticon.com</small>
             </div>
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
         </div>
     </footer>
 
