@@ -12,13 +12,7 @@
 
 require 'vendor/autoload.php';
 
-$host = "http://$_SERVER[HTTP_HOST]";
-
-$updateDate = '13 March 2020';
-
-$nextUpdate = '10 AM CET 15 March 2020'; 
-
-$contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
+include('includes/init.php');
 
 include('includes/head.php');
 
