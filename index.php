@@ -64,7 +64,7 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="https://www.who.int/" target="_blank" rel="noreferrer">World Health Organization</a>
+                <a class="nav-item nav-link" href="#measures">Basic protective measures</a>
             </div>
         </div>
     </nav>
@@ -219,6 +219,81 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
             </div>
         </div>
 
+        <hr style="background:#343a40">
+        
+        <h2 class="text-warning mb-4" id="measures">Be Ready for coronavirus</h2>
+        <div class="row text-center text-lg-left">
+            
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/be-ready-social-3.jpg" alt="Be ready for #coronavirus">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/be-ready-social-2.jpg" alt="Be ready to fight #COVID19">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/be-ready-social-1.jpg" alt="Be ready to fight #COVID19">
+            </div> 
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/be-smart-if-you-develop.jpg" alt="Be smart if you develop #COVID19">
+            </div> 
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/be-smart-inform.jpg" alt="Be smart inform #COVID19">
+            </div> 
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/be-safe.jpg" alt="Be safe #COVID19">
+            </div> 
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/be-kind-to-support.jpg" alt="Be kind to support #COVID19">
+            </div> 
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/be-kind-to-address-stigma.jpg" alt="Be kind to address stigma #COVID19">
+            </div> 
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/be-kind-to-address-fear.jpg" alt="Be kind toa ddress fear #COVID19">
+            </div> 
+
+        </div>
+
+        <hr style="background:#343a40">
+
+        <h2 class="text-warning mb-4">Protect yourself and others from getting sick</h2>
+        <div class="row text-center text-lg-left">
+            
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/blue-1.jpg" alt="Wash your hands #COVID19">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/blue-2.jpg" alt="Protect yourself and others from getting sick #COVID19">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/blue-3.jpg" alt="Protect others from getting sick #COVID19">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 mb-4">
+                <img class="img-fluid img-thumbnail" src="public/img/flyers/blue-4.jpg" alt="Protect others from getting sick #COVID19">
+            </div>
+
+        </div>
+        
+
+        <blockquote class="blockquote mt-5 mb-4">
+            <p class="mb-3 text-light font-weight-bold">Taken from the World Health Organization website for the public</p>
+            <a class="link" href="https://www.who.int/" target="_blank" rel="noreferrer">World Health Organization</a>
+            <footer class="blockquote-footer text-light"><b>Protection measures for persons who are in or have recently visited (past 14 days) areas where COVID-19 is spreading</b></footer>
+            <div>
+                <p class="text-light">
+                    Follow the guidance outlined above.
+                </p>
+                <p class="text-light">
+                    Stay at home if you begin to feel unwell, even with mild symptoms such as headache and slight runny nose, until you recover. Why? Avoiding contact with others and visits to medical facilities will allow these facilities to operate more effectively and help protect you and others from possible COVID-19 and other viruses.
+                </p>
+                <p class="text-light">
+                    If you develop fever, cough and difficulty breathing, seek medical advice promptly as this may be due to a respiratory infection or other serious condition. Call in advance and tell your provider of any recent travel or contact with travelers. Why? Calling in advance will allow your health care provider to quickly direct you to the right health facility. This will also help to prevent possible spread of COVID-19 and other viruses.
+                </p>
+            </div>
+        </blockquote>
+
+        <hr style="background:#343a40">
+
         <blockquote class="blockquote mt-5 mb-4">
             <p class="mb-0"></p>
             <footer class="blockquote-footer">Data are taken from <strong><a href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases" target="_blank">HUMANITARIAN DATA EXCHANGE</a> dataset provided by JHU CSSE</strong></footer>
@@ -226,8 +301,6 @@ $contagionDays = count(glob(dirname(__FILE__) . '/data/csv/reports/*'));
                 <small class="text-muted">This website disclaims any representation and warranty regarding the data shown, including accuracy, suitability for use and marketability. <br> This is not an institutional site!</small>
             </div>
         </blockquote>
-
-        <hr style="background:#343a40">
 
         <p class="float-right">
             <a href="#">Back to top</a>
