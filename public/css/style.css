@@ -12,6 +12,10 @@ body {
     background-color: #0e1a23;
 }
 
+html {
+    scroll-behavior: smooth !important;
+}
+
 .bg-dark {
     background-color: rgba(14, 26, 35, 0.9)!important;
 }
