@@ -1,3 +1,5 @@
+        <p class="mb-3 text-light font-weight-bold">Taken from the World Health Organization website for the public</p>
+        
         <h2 class="text-warning mb-4" id="measures">Be Ready for coronavirus</h2>
         <div class="row text-center text-lg-left">
             

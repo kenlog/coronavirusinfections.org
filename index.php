@@ -32,6 +32,8 @@ include('includes/head.php');
 
         <?php include('includes/data-graph.php'); ?>  
 
+        <?php include('includes/blockquote-data.php'); ?> 
+        
         <hr style="background:#343a40">
             
         <?php include('includes/protective-measures.php'); ?> 
@@ -39,8 +41,6 @@ include('includes/head.php');
         <?php include('includes/blockquote-who.php'); ?>    
 
         <hr style="background:#343a40">
-
-        <?php include('includes/blockquote-data.php'); ?> 
 
         <p class="float-right">
             <a href="#">Back to top</a>

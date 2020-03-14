@@ -1,5 +1,4 @@
         <blockquote class="blockquote mt-5 mb-4">
-            <p class="mb-3 text-light font-weight-bold">Taken from the World Health Organization website for the public</p>
             <a class="link" href="https://www.who.int/" target="_blank" rel="noreferrer">World Health Organization</a>
             <footer class="blockquote-footer text-light"><b>Protection measures for persons who are in or have recently visited (past 14 days) areas where COVID-19 is spreading</b></footer>
             <div>
