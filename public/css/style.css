@@ -180,3 +180,10 @@ select {
 .share-buttons {
     list-style: none; padding: 0;
 }
+
+:target::before {
+    content: '';
+    display: block;
+    height:      120px;
+    margin-top: -120px;
+}
