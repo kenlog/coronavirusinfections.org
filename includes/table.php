@@ -1,3 +1,17 @@
+<?php
+
+/**
+ * This file is part of the coronavirusinfections.org project.
+ * 
+ * @author Valentino Pesce
+ * @copyright (c) Valentino Pesce <valentino@iltuobrand.it>
+ * 
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+ ?>
+        
         <div id="toolbar" class="select mr-2" style="display:none">
             <select class="form-control">
                 <option value="all">Export All</option>

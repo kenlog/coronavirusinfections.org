@@ -1,3 +1,17 @@
+<?php
+
+/**
+ * This file is part of the coronavirusinfections.org project.
+ * 
+ * @author Valentino Pesce
+ * @copyright (c) Valentino Pesce <valentino@iltuobrand.it>
+ * 
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+ ?>
+    
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="<?= $host; ?>">
             <img src="public/img/logo.png?v=2" width="30" height="30" class="d-inline-block align-top" alt="Logo">

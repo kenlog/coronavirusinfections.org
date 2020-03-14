@@ -1,3 +1,17 @@
+<?php
+
+/**
+ * This file is part of the coronavirusinfections.org project.
+ * 
+ * @author Valentino Pesce
+ * @copyright (c) Valentino Pesce <valentino@iltuobrand.it>
+ * 
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+ ?>
+         
         <canvas id="globallyChart" width="100%"></canvas>
 
         <div class="card text-white bg-danger mb-5 mt-5 mx-auto" style="max-width: 100%;">

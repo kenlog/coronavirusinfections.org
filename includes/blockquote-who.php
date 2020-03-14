@@ -1,3 +1,17 @@
+<?php
+
+/**
+ * This file is part of the coronavirusinfections.org project.
+ * 
+ * @author Valentino Pesce
+ * @copyright (c) Valentino Pesce <valentino@iltuobrand.it>
+ * 
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+ ?>
+        
         <blockquote class="blockquote mt-5 mb-4">
             <a class="link" href="https://www.who.int/" target="_blank" rel="noreferrer">World Health Organization</a>
             <footer class="blockquote-footer text-light"><b>Protection measures for persons who are in or have recently visited (past 14 days) areas where COVID-19 is spreading</b></footer>
