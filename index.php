@@ -50,6 +50,8 @@ include('includes/head.php');
 
     <?php include('includes/footer.php'); ?> 
 
+    <?php include('includes/share-buttons.php'); ?>
+
     <?php include('includes/script.php'); ?>
 
 </body>

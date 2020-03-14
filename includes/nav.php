@@ -11,5 +11,11 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="#measures">Basic protective measures</a>
             </div>
+            <ul class="share-buttons navbar-nav flex-row ml-md-auto d-md-flex">
+                <li style="display: inline;margin: 3px;"><a href="https://twitter.com/intent/tweet?source=URL&amp;text=https://coronavirusinfections.org/" target="_blank" title="Share on Twitter"><img src="public/icons/Twitter.png" width="80%"></a></li>
+                <li style="display: inline;margin: 3px;"><a href="https://www.facebook.com/sharer/sharer.php?u=https://coronavirusinfections.org/" title="Share on Facebook" target="_blank"><img src="public/icons/Facebook.png" width="80%"></a></li>
+                <li style="display: inline;margin: 3px;"><a href="https://t.me/share/url?url=https://coronavirusinfections.org/&amp;text=Coronavirusinfections.org" target="_blank" title="Share on Telegram"><img src="public/icons/telegram.png" width="80%"></a></li>
+                <li style="display: inline;margin: 3px;"><a href="whatsapp://send?text=https://coronavirusinfections.org/" target="_blank" title="Share on Whatsapp"><img src="public/icons/whatsapp.png" width="80%"></a></li>
+            </ul>
         </div>
     </nav>

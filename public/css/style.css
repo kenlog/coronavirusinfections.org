@@ -176,3 +176,7 @@ select {
 .card-border {
     border: 1px solid rgb(16, 73, 102);
 }
+
+.share-buttons {
+    list-style: none; padding: 0;
+}

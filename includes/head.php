@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/fontawesome-all.css">
     <link rel="stylesheet" href="public/css/bootstrap-table.min.css">
-    <link rel="stylesheet" href="public/css/style.css?v=6">
+    <link rel="stylesheet" href="public/css/style.css?v=7">
     <title>Coronavirus infections (COVID-19)</title>
-    <meta name="description" content=" Health information on coronavirus infections with detailed statistics from around the world. Data can be exported in 7 different formats.">
+    <meta name="description" content="Health information on coronavirus infections with detailed statistics from around the world. Data can be exported in 7 different formats.">
     <link rel="apple-touch-icon" sizes="57x57" href="public/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="public/icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="public/icons/apple-icon-72x72.png">
@@ -26,4 +26,15 @@
     <meta name="msapplication-TileColor" content="#0c2433">
     <meta name="msapplication-TileImage" content="public/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#0c2433">
+
+    <meta property="og:title" content="Coronavirus infections (COVID-19)">
+    <meta property="og:description" content="Health information on coronavirus infections with detailed statistics from around the world. Data can be exported in 7 different formats.">
+    <meta property="og:image" content="https://coronavirusinfections.org/public/img/coronavirusinfections.jpg">
+    <meta property="og:url" content="https://coronavirusinfections.org">
+
+    <meta property="twitter:title" content="Coronavirus infections (COVID-19)">
+    <meta property="twitter:description" content="Health information on coronavirus infections with detailed statistics from around the world. Data can be exported in 7 different formats.">
+    <meta property="twitter:image" content="https://coronavirusinfections.org/public/img/coronavirusinfections.jpg">
+    <meta property="twitter:url" content="https://coronavirusinfections.org">
+
 </head>
