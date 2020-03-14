@@ -24,21 +24,29 @@ include('includes/head.php');
 
     <div class="container text-dark text-center">
         
-        <?php include('includes/heading.php'); ?>
-
-        <?php include('includes/form-by-date.php'); ?>   
-
-        <?php include('includes/table.php'); ?>     
-
-        <?php include('includes/data-graph.php'); ?>  
-
-        <?php include('includes/blockquote-data.php'); ?> 
+        <?php 
         
+            include('includes/heading.php'); 
+
+            include('includes/form-by-date.php');
+
+            include('includes/table.php');
+
+            include('includes/data-graph.php');
+
+            include('includes/blockquote-data.php');
+        
+        ?>
+
         <hr style="background:#343a40">
             
-        <?php include('includes/protective-measures.php'); ?> 
+        <?php 
+        
+            include('includes/protective-measures.php'); 
 
-        <?php include('includes/blockquote-who.php'); ?>    
+            include('includes/blockquote-who.php');
+        
+        ?>   
 
         <hr style="background:#343a40">
 
@@ -48,11 +56,15 @@ include('includes/head.php');
 
     </div>
 
-    <?php include('includes/footer.php'); ?> 
+    <?php 
+    
+        include('includes/footer.php'); 
 
-    <?php include('includes/share-buttons.php'); ?>
+        include('includes/share-buttons.php');
 
-    <?php include('includes/script.php'); ?>
+        include('includes/script.php');
+    
+    ?>
 
 </body>
 
