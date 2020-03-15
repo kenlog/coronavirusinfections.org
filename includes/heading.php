@@ -18,6 +18,7 @@
                 <p class="lead">A pneumonia of unknown cause detected in Wuhan, China was first reported to the <br> WHO Country Office in China on 31 December 2019.</p>
                 <p class="lead">The outbreak was declared a Public Health Emergency of International Concern on 30 January 2020.</p>
                 <p class="lead">On 11 February 2020, WHO announced a name for the new coronavirus disease: COVID-19</p>
+                <p class="lead">On 11 March 2020, "WHO has been assessing this outbreak around the clock and we are deeply concerned both by the alarming levels of spread and severity, and by the alarming levels of inaction. We have therefore made the assessment that COVID-19 can be characterized as a pandemic."</p>
             </div>
         </div>
 
