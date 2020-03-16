@@ -41,9 +41,9 @@
             <th data-field="state" data-filter-control="input">Province/State</th>
             <th data-field="country" data-filter-control="input">Country/Region</th>
             <th data-field="data" data-filter-control="select">Last Update</th>
-            <th>Confirmed</th>
-            <th>Recovered</th>
-            <th>Deaths</th>
+            <th data-sortable="true">Confirmed</th>
+            <th data-sortable="true">Recovered</th>
+            <th data-sortable="true">Deaths</th>
           </tr>
         </thead>
         <tbody>
