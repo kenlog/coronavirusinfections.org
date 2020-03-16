@@ -14,7 +14,7 @@ Data can be exported in 7 different formats 'json', 'xml', 'csv', 'txt', 'sql', 
 ## Collaborators
 If you believe you are of assistance do not hesitate to send pull requests
 
-## Authors
+## Author
 
 * **Valentino Pesce** - [Kenlog](https://github.com/kenlog)
 
