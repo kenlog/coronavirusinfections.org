@@ -17,9 +17,9 @@
         <div class="card text-white bg-danger mb-5 mt-5 mx-auto" style="max-width: 100%;">
             <?php 
                 if (!empty($_POST['date'])) {
-                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br><i class="fas fa-history"></i> '.$_POST['date'].' <br> </div>';
+                    echo '<div class="card-header font-weight-bold"><i class="fas fa-procedures"></i>  (COVID-19) situation <br><i class="fas fa-history"></i> <i class="fas fa-calendar-day"></i> '.$_POST['date'].' <br> </div>';
                 } else {
-                    echo '<div class="card-header font-weight-bold"><i class="fas fa-globe"></i> Globally <br> Last data update: <br> '.$updateDate.' <br> <i class="fas fa-history"></i> Total cases</div>';
+                    echo '<div class="card-header font-weight-bold"><i class="fas fa-procedures"></i>  (COVID-19) situation <br> Last data update: <br> <i class="fas fa-calendar-day"></i> '.$updateDate.' <br> <i class="fas fa-history"></i> Total cases</div>';
                 }
             ?>
             <div class="card-body">
