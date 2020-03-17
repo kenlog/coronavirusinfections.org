@@ -188,6 +188,6 @@ select {
 :target::before {
     content: '';
     display: block;
-    height:      120px;
-    margin-top: -120px;
+    height:      250px;
+    margin-top: -250px;
 }
