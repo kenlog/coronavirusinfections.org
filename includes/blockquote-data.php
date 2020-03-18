@@ -11,6 +11,7 @@
  */
 
  ?>
+        <hr style="background:#343a40">
         
         <blockquote class="blockquote mt-5 mb-4">
             <p class="mb-0"></p>

@@ -33,8 +33,6 @@ include('includes/head.php');
             include('includes/table.php');
 
             include('includes/data-graph.php');
-
-            include('includes/blockquote-data.php');
         
         ?>
 
@@ -45,6 +43,8 @@ include('includes/head.php');
             include('includes/protective-measures.php'); 
 
             include('includes/blockquote-who.php');
+
+            include('includes/blockquote-data.php');
         
         ?>   
 
