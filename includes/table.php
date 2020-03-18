@@ -38,6 +38,8 @@
         data-show-export="true">
         <thead class="thead-light">
           <tr>
+            <th data-visible="false">Lat.</th>
+            <th data-visible="false">Long.</th>
             <th data-field="state" data-filter-control="input">Province/State</th>
             <th data-field="country" data-filter-control="input">Country/Region</th>
             <th data-field="data" data-filter-control="select">Last Update</th>
@@ -66,6 +68,16 @@
           $sumRecovered = 0;
           foreach ($csvFile as $row) {
             echo '<tr>';
+            if (isset($row[6])) {
+              echo '<th>'.$row[6].'</th>';
+            } else {
+              echo '<th>00.0000</th>';
+            }
+            if (isset($row[7])) {
+              echo '<th>'.$row[7].'</th>';
+            } else {
+              echo '<th>00.0000</th>';
+            }
             if (empty($row[0])) {
                 echo '<th>'.$row[1].'</th>';
             } else {
