@@ -16,6 +16,8 @@ $updateDate = '17 March 2020';
 
 $nextUpdate = '10 AM CET 19 March 2020'; 
 
-$reportFolder = glob('data/csv/reports/*.csv');
+$pathReportFolder = 'data/csv/reports/';
+
+$reportFolder = glob($pathReportFolder.'*.csv');
 
 $contagionDays = count($reportFolder);

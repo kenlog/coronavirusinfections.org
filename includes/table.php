@@ -50,8 +50,8 @@
         </thead>
         <tbody>
         <?php 
-        if (!empty($_POST['date']) && file_exists('data/csv/reports/'.$_POST['date'].'.csv')) {
-            $file = 'data/csv/reports/'.$_POST['date'].'.csv';
+        if (!empty($_POST['date']) && file_exists($pathReportFolder.$_POST['date'].'.csv')) {
+            $file = $pathReportFolder.$_POST['date'].'.csv';
         } else {
             $files = $reportFolder;
             $file = end($files);
