@@ -84,7 +84,7 @@
                 echo '<th>'.$row[0].'</th>';
             }
             echo '<th>'.$row[1].'</th>';
-            echo '<th>'.$row[2].'</th>';
+            echo '<th><small>'.$row[2].'</small></th>';
             echo '<th>'.$row[3].'</th>';
             echo '<th>'.$row[5].'</th>';
             echo '<th>'.$row[4].'</th>';
