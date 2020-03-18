@@ -53,7 +53,7 @@
         if (!empty($_POST['date']) && file_exists('data/csv/reports/'.$_POST['date'].'.csv')) {
             $file = 'data/csv/reports/'.$_POST['date'].'.csv';
         } else {
-            $files = glob('data/csv/reports/*');
+            $files = $reportFolder;
             $file = end($files);
         }
           $csvFile = new Keboola\Csv\CsvReader(

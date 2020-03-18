@@ -17,7 +17,7 @@
                 <select name="date" class="form-control" required>
                     <option value="" selected="selected">Select by date</option>
                     <?php 
-                        foreach(glob('data/csv/reports/*') as $filename){
+                        foreach($reportFolder as $filename){
                             $filename = basename($filename);
                             echo "<option value='" . str_replace('.csv','', $filename) . "'>".str_replace('.csv','', $filename)."</option>";
                         }

@@ -27,7 +27,7 @@
         if (!empty($_POST['date'])) {
             $date = $_POST['date'];
         } else {
-            $files = glob('data/csv/reports/*');
+            $files = $reportFolder;
             $lastFile = end($files);
             $lastFile = str_replace('data/csv/reports/','',$lastFile);
             $lastFile = str_replace('.csv','',$lastFile);
