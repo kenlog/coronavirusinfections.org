@@ -34,7 +34,7 @@
                 <div class="col-sm-12 mb-3">
                     <div class="card text-white bg-info">
                         <div class="card-header">
-                            <h3 class="card-title font-weight-bold">CONFIRMED</h3>
+                            <h3 class="card-title font-weight-bold">CONFIRMED CASES</h3>
                         </div>
                         <div class="card-body">
                             <h3 class="card-title font-weight-bold"><?= number_format($sumConfirmed); ?></h3>
@@ -44,7 +44,7 @@
                 <div class="col-sm-6 mb-3">
                     <div class="card text-white bg-info">
                         <div class="card-header">
-                            <h3 class="card-title font-weight-bold">RECOVERED</h3>
+                            <h3 class="card-title font-weight-bold">RECOVERED CASES</h3>
                         </div>
                         <div class="card-body">
                             <h3 class="card-text font-weight-bold"><?= number_format($sumRecovered); ?></h3>
@@ -54,7 +54,7 @@
                 <div class="col-sm-6 mb-3">
                     <div class="card text-white bg-info">
                         <div class="card-header">
-                            <h3 class="card-title font-weight-bold">DEATHS</h3>
+                            <h3 class="card-title font-weight-bold">DEATHS CASES</h3>
                         </div>
                         <div class="card-body">
                             <h3 class="card-text font-weight-bold"><?= number_format($sumDeaths); ?></h3>
