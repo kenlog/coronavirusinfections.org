@@ -21,3 +21,12 @@ $pathReportFolder = 'data/csv/reports/';
 $reportFolder = glob($pathReportFolder.'*.csv');
 
 $contagionDays = count($reportFolder);
+
+function percentage(int $a, int $b, int $decimals = 2)
+{
+    if ($b > $a) {
+        return number_format((($a / $b) * 100),$decimals) . '%';
+    } else {
+        return '0.00%';
+    }
+}
