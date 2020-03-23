@@ -50,7 +50,7 @@
                             <h3 class="card-text font-weight-bold"><?= number_format($sumRecovered); ?></h3>
                         </div>
                         <div class="card-footer text-muted">
-                            <h4 class="card-text"><?= percentage($sumRecovered,$sumConfirmed); ?></h4> 
+                            <h4 class="card-text"><?= percentage($sumRecovered,$sumConfirmed,1); ?></h4> 
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                             <h3 class="card-text font-weight-bold"><?= number_format($sumDeaths); ?></h3>
                         </div>
                         <div class="card-footer text-muted">
-                            <h4 class="card-text"><?= percentage($sumDeaths,$sumConfirmed); ?></h4> 
+                            <h4 class="card-text"><?= percentage($sumDeaths,$sumConfirmed,1); ?></h4> 
                         </div>
                     </div>
                 </div>
