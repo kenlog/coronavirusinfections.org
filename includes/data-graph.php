@@ -68,8 +68,6 @@
                         </div>
                         <div class="card-body">
                             <h5>
-                                China Very High <br>
-                                Regional Level Very High <br>
                                 Global Level Very High
                             </h5>
                         </div>
