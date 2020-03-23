@@ -1,4 +1,4 @@
-name: Deploy via git-ftp
+name: Deploy 🚀
 on: push
 jobs:
   deploy:
