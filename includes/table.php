@@ -40,7 +40,7 @@
           <tr>
             <th data-visible="false">Lat.</th>
             <th data-visible="false">Long.</th>
-            <th data-field="state" data-filter-control="input">Province/State</th>
+            <th data-visible="false" data-field="state" data-filter-control="input">Province/State</th>
             <th data-field="country" data-filter-control="input">Country/Region</th>
             <th data-field="data" data-filter-control="select">Last Update</th>
             <th data-sortable="true">Confirmed</th>
