@@ -12,7 +12,7 @@
 
 $host = "https://coronavirusinfections.org";
 
-$updateDate = '25 March 2020';
+$updateDate = '24 March 2020';
 
 $nextUpdate = '10 AM CET 26 March 2020'; 
 
