@@ -24,13 +24,13 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#measures">Basic protective measures</a>
+                    <a class="nav-link font-weight-bold" href="#measures">Basic protective measures</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://secure.avaaz.org/campaign/en/covid19_global_response_loc/?copy" target="_blank">Help slow down coronavirus (avaaz.org)</a>
+                    <a class="nav-link font-weight-bold" href="https://secure.avaaz.org/campaign/en/covid19_global_response_loc/?copy" target="_blank">Help slow down coronavirus (avaaz.org)</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://italy.coronavirusinfections.org/">Infection in Italy</a>
+                    <a class="nav-link font-weight-bold" href="https://italy.coronavirusinfections.org/">Infection in Italy</a>
                 </li>
             </div>
             <ul class="share-buttons navbar-nav flex-row ml-md-auto d-md-flex">
