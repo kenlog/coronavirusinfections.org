@@ -13,7 +13,7 @@
  ?>
     
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="<?= $host; ?>">
+        <a class="navbar-brand" href="<?= $data['host']; ?>">
             <img src="public/img/logo.png?v=2" width="30" height="30" class="d-inline-block align-top" alt="Logo">
             Coronavirus infections
         </a>

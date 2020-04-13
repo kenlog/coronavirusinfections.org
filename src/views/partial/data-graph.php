@@ -7,7 +7,7 @@
  * @copyright (c) Valentino Pesce <valentino@iltuobrand.it>
  * 
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * file that was distributed with modelHome source code.
  */
 
  ?>
@@ -25,7 +25,7 @@
                             if (!empty($_POST['date'])) {
                                 echo '<h5 class="font-weight-bold"><i class="fas fa-calendar-day"></i> '.$_POST['date'].' </h5>';
                             } else {
-                                echo '<h5 class="font-weight-bold"><i class="fas fa-calendar-day"></i> '.$updateDate.' </h5>';
+                                echo '<h5 class="font-weight-bold"><i class="fas fa-calendar-day"></i> '.$data['updateDate'].' </h5>';
                             }
                         ?>
                         </div>
@@ -50,7 +50,7 @@
                             <h3 class="card-text font-weight-bold"><?= number_format($sumRecovered); ?></h3>
                         </div>
                         <div class="card-footer text-muted">
-                            <h4 class="card-text"><?= $this->percentage($sumRecovered,$sumConfirmed,1); ?></h4> 
+                            <h4 class="card-text"><?= $modelHome->percentage($sumRecovered,$sumConfirmed,1); ?></h4> 
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                             <h3 class="card-text font-weight-bold"><?= number_format($sumDeaths); ?></h3>
                         </div>
                         <div class="card-footer text-muted">
-                            <h4 class="card-text"><?= $this->percentage($sumDeaths,$sumConfirmed,1); ?></h4> 
+                            <h4 class="card-text"><?= $modelHome->percentage($sumDeaths,$sumConfirmed,1); ?></h4> 
                         </div>
                     </div>
                 </div>

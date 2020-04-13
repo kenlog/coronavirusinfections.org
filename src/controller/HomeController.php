@@ -19,6 +19,12 @@ class HomeController extends ContentController
 	public function index()
 	{
 		$data = $this->modelHome->getData();
-		$this->view->show('HomePage.php', $data);
+		$percentage = $this->modelHome;
+		$this->view->show('HomePage.php', 
+			[
+				'data' => $data,
+				'modelHome' => $percentage
+			]
+		);
 	}
 }

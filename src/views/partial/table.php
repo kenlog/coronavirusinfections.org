@@ -50,10 +50,10 @@
         </thead>
         <tbody>
         <?php 
-        if (!empty($_POST['date']) && file_exists($pathReportFolder.$_POST['date'].'.csv')) {
-            $file = $pathReportFolder.$_POST['date'].'.csv';
+        if (!empty($_POST['date']) && file_exists($data['pathReportFolder'].$_POST['date'].'.csv')) {
+            $file = $data['pathReportFolder'].$_POST['date'].'.csv';
         } else {
-            $files = $reportFolder;
+            $files = $data['reportFolder'];
             $file = end($files);
         }
           $csvFile = new Keboola\Csv\CsvReader(
