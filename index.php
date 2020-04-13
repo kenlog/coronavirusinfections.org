@@ -1,71 +1,40 @@
-<?php
+<?php ini_set('display_errors', 1);
 
 /**
- * This file is part of the coronavirusinfections.org project.
+ * This file is part of the Instant MVC PHP Micro-Framework project.
  * 
- * @author Valentino Pesce
- * @copyright (c) Valentino Pesce <valentino@iltuobrand.it>
+ * @package     Instant MVC PHP Micro-Framework
+ * @author      Valentino Pesce 
+ * @link        https://github.com/kenlog
+ * @copyright   2019 (c) Valentino Pesce <valentino@iltuobrand.it>
  * 
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-require 'vendor/autoload.php';
+require_once 'src/config.php';
 
-include('includes/init.php');
+$autoload = 'vendor/autoload.php';
 
-include('includes/head.php');
-
-?>
-
-<body>
+if (file_exists($autoload)) {
     
-    <?php include('includes/nav.php'); ?>
+    require $autoload;
 
-    <div class="container text-dark text-center">
-        
-        <?php 
-        
-            include('includes/heading.php'); 
+    $loader = new Nette\Loaders\RobotLoader;
+    $loader->addDirectory(__DIR__ . '/src');
+    $loader->setTempDirectory(__DIR__ . '/temp');
+    $loader->register();
 
-            include('includes/form-by-date.php');
+    $app            = System\App::instance();
+    $app->request   = System\Request::instance();
+    $app->route     = System\Route::instance($app->request);
 
-            include('includes/table.php');
+    $route = $app->route;
 
-            include('includes/data-graph.php');
-        
-        ?>
+    include 'src/route.php';
 
-        <hr style="background:#343a40">
-            
-        <?php 
-        
-            include('includes/protective-measures.php'); 
+    $route->end();
 
-            include('includes/blockquote-who.php');
-
-            include('includes/blockquote-data.php');
-        
-        ?>   
-
-        <hr style="background:#343a40">
-
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
-
-    </div>
-
-    <?php 
-    
-        include('includes/footer.php'); 
-
-        include('includes/share-buttons.php');
-
-        include('includes/script.php');
-    
-    ?>
-
-</body>
-
-</html>
+} else {
+    echo '<p>Install composer dependencies, run: <code style="background: #eee;padding: 5px;color: #9c3eb9;">composer install</code></p>';
+}
