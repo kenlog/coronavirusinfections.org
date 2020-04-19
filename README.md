@@ -1,5 +1,4 @@
 ![GitHub](https://img.shields.io/github/license/kenlog/coronavirusinfections.org)
-![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fcoronavirusinfections.org)
 ![Deploy 🚀](https://github.com/kenlog/coronavirusinfections.org/workflows/Deploy%20%F0%9F%9A%80/badge.svg)
 
 [coronavirusinfections.org](https://coronavirusinfections.org/)
